@@ -1,6 +1,6 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: What are linked reads?
+description: An overview of the technology.
 ---
 
 Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.

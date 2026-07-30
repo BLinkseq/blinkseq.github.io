@@ -1,40 +1,44 @@
 ---
 title: Bead-Barcoded Linked-read Sequencing
-description: Linking sequences and beyond.
+description: Linking sequences and beyond
 template: splash # Remove or comment out this line to display the site sidebar on this page.
 hero:
   tagline: Welcome to the official BLink-seq page. Have a look around!
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/logo.webp
   actions:
     - text: Overview
-      link: /guides/example/
+      link: /info/linkedreads/
       icon: right-arrow
     - text: Read the protocols
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+      link: /protocols/example/
+      icon: document
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
 
-## Next steps
+## Getting Started
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+<CardGrid>
+	<LinkCard
+	  title="Learn about linked reads"
+		href=""
+	  description="Start here if you haven't worked with linked-reads before"
+	/>
+	<LinkCard
+	    title="Review the protocol"
+			href=""
+			description="This site hosts the protocols to make BLink beads and prepare BLink-seq libraries"
+	/>
+	<LinkCard
+	  title="Processing linked-read seq data"
+		href="https://pdimens.github.io/harpy"
+		description="Check out Harpy for linked-read data processing"
+	/>
+	<LinkCard
+	  title="Simulate linked-read data"
+		href="https://pdimens.github.io/mimick"
+		description="Use Mimick to create linked-read data with fine-tuned library metrics"
+	/>
 </CardGrid>

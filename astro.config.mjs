@@ -7,19 +7,23 @@ export default defineConfig({
 	site: 'https://astronaut.github.io',
 	integrations: [
 		starlight({
-			title: 'BLink-seq',
+      title: '',
+      logo: {
+        src: './src/assets/logo.svg',
+      },
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/BLinkseq' }],
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
+					label: 'Linked Reads',
+					items: [{ autogenerate: { directory: 'info' } }],
+					//items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+						//{ label: 'What they are', slug: 'info/linked-reads' },
+					//],
 				},
 				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
+					label: 'Protocols',
+					items: [{ autogenerate: { directory: 'protocols' } }],
 				},
 			],
 		}),
