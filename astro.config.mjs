@@ -7,8 +7,8 @@ export default defineConfig({
 	site: 'https://astronaut.github.io',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'BLink-seq',
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/BLinkseq' }],
 			sidebar: [
 				{
 					label: 'Guides',
