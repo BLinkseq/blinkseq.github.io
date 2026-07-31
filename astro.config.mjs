@@ -23,7 +23,8 @@ export default defineConfig({
       }),
         starlightScrollToTop({
           showProgressRing: true,
-          progressRingColor: '#b288f5'
+          progressRingColor: '#b288f5',
+          borderRadius: '50',
         })
       ],
       sidebar: [
