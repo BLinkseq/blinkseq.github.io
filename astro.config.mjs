@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightUiTweaks from 'starlight-ui-tweaks'
+import starlightScrollToTop from 'starlight-scroll-to-top'
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,7 +20,12 @@ export default defineConfig({
           { label: "Linked-Read Standard", href: "https://blinkseq.github.io/lastq" },
           { label: "Harpy", href: "https://pdimens.github.io/harpy" },
         ],
-			})],
+      }),
+        starlightScrollToTop({
+          showProgressRing: true,
+          progressRingColor: '#b288f5'
+        })
+      ],
       sidebar: [
         {
           label: 'About',
