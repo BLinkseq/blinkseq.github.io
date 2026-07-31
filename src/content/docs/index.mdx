@@ -1,13 +1,13 @@
 ---
 title: Bead-Barcoded Linked-read Sequencing
 description: Linking sequences and beyond
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+template: splash
 hero:
   tagline: Welcome to the official BLink-seq page. Have a look around!
   image:
     file: ../../assets/logo.webp
   actions:
-    - text: Overview
+    - text: Get Started
       link: /info/linkedreads/
       icon: right-arrow
     - text: Read the protocols
@@ -24,16 +24,16 @@ import { LinkCard } from '@astrojs/starlight/components';
 <CardGrid>
 	<LinkCard
 	  title="Learn about linked reads"
-		href=""
+		href="/info/linkedreads"
 	  description="Start here if you haven't worked with linked-reads before"
 	/>
 	<LinkCard
 	    title="Review the protocol"
-			href=""
+			href="/protocols/example"
 			description="This site hosts the protocols to make BLink beads and prepare BLink-seq libraries"
 	/>
 	<LinkCard
-	  title="Processing linked-read seq data"
+	  title="Processing linked-read data"
 		href="https://pdimens.github.io/harpy"
 		description="Check out Harpy for linked-read data processing"
 	/>
