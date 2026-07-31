@@ -1,5 +1,7 @@
 ---
 title: What are linked reads
+sidebar:
+  order: 1
 ---
 
 Linked reads are short read (e.g. Illumina) data. What makes them different is that they contain an added DNA segment ("barcode") that lets us associate

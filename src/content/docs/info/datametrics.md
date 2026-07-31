@@ -1,5 +1,7 @@
 ---
-title: Understanding linked-read data
+title: Linked-read data nuances
+sidebar:
+  order: 2
 ---
 
 Unlike some other fancy well-touted sample preparation methods (_like mate-pair_), linked-read data **is** whole genome
