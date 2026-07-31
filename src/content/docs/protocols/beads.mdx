@@ -1,0 +1,72 @@
+---
+title: BLink bead preparation protocol
+sidebar:
+  label: BLink beads
+  order: 2
+---
+import { Steps } from '@astrojs/starlight/components';
+import { LinkButton } from '@astrojs/starlight/components';
+import { Badge } from '@astrojs/starlight/components';
+import { Card } from '@astrojs/starlight/components';
+
+This page provides the BLink bead protocol in full as a reference. The official PDF is better formatted for printing and
+using in real time at a laboratory bench.
+
+<h5 align="center">
+<LinkButton href="https://github.com/BLinkseq/BLinkseq-Protocol/releases/download/1.0/BLink-seq_BeadPrepProtocol.pdf" icon="download">
+  Official BLink bead Protocol
+</LinkButton>
+</h5>
+
+The BLink bead technology is based on magnetic, barcoded beads loaded with Tn5 protein to generate active transposomes.
+The preparation of these beads requires a series of barcode ligations (split-pool format) to build out the final combinatorial
+barcode plus Tn5 mosaic end (ME) sequence. Each bead has many copies of the same barcode; total barcode complexity in
+a batch of beads is > 7M combinatorial barcodes. A ‘staggered’ barcode segment of variable length ensures the sequencing
+reads are high complexity, even through the short invariant regions of the barcoded region. The barcode is captured in R1
+on Illumina sequencers. See separate [BLink-seq Library Prep Protocol](../libraries/) to use BLink beads to generate linked-read
+libraries.
+
+<Card title="Duration" icon="clock">
+    The preparation of a batch of beads takes ~1 week to complete, ideally with 2-3 people to maximize efficiency of the split-pooling steps.
+</Card>
+
+### Day 1
+- <Badge text="Recommended" variant="success" /> Prepare stock buffers and duplex-oligo stocks, if needed
+- Bind biotinylated-duplex oligo to beads (bulk) – overnight incubation
+### Day 2-3+
+- Split beads to one 8-well strip, ligate Stagger-duplex, wash, pool
+- Split beads to 12 x 8-well strips, ligate Segment1-duplex (96 barcodes), wash, pool
+- Split beads to 12 x 8-well strips, ligate Segment2-duplex (96 barcodes), wash, pool
+- Split beads to 12 x 8-well strips, ligate Segment3-duplex (96 barcodes), wash
+- Ligate ME-duplex, wash, final pooling
+### Day 3+
+Test the bead batch
+- Strip one aliquot of beads with NaOH to remove duplex oligos and anneal the ME-REV oligo
+- Test-load small amounts of beads with a Tn5 dilution series
+- Prepare haplotagging libraries with a control DNA sample to determine the optimal Tn5-loading dilution
+### As needed
+- Strip aliquots of beads with NaOH and anneal the ME-REV oligo
+- Load beads with Tn5 protein
+- <Badge text="Recommended" variant="success" /> Pool all beads after stripping and/or loading large batches, and store as a homogeneous stock.
+
+### Storage
+BLink beads can be stored in several formats (unstripped, stripped+annealed to ME-REV, loaded with Tn5) at <Badge text="4°C" variant="note" />, in the
+appropriate buffer as described in the protocol. Beads can be stripped/annealed and loaded with Tn5 as needed to prepare
+the final transposome-active haplotagging bead stock, as the best long-term storage may be in the unstripped format. The
+loading seems to be consistent for beads stripped and/or loaded at different times, though test loading can be repeated as
+needed to confirm the appropriate Tn5 loading concentration.
+
+**Materials and Equipment Required:** see [Appendix A]() and [BLinkBead_oligos.xlsx]()
+
+**Duplex-oligo stocks:** see [Appendix B]() to prepare duplex-oligo stocks used in ligation reactions
+
+Technology development: Jennifer Grenier[^1] designed BLink beads, modified from the original ‘haplotagging beads’
+designed by Frank Chan[^2] and Marek Kucka[^2]. All of the authors of the manuscript _BLink-
+seq delivers population-scale haplotypes without long reads: a scalable framework for non-model genomics_ contributed to
+developing BLink-seq.
+
+[^1]: Genomics Innovation Hub, Biotechnology Resource Center, Institute of Biotechnology, Cornell University, Ithaca, NY.
+[^2]: Friedrich Miescher Laboratory of the Max Planck Society, Tübingen, Germany; https://doi.org/10.1073/pnas.2015005118
+
+
+![](https://static.vecteezy.com/system/resources/previews/016/029/861/non_2x/flat-under-construction-sign-background-design-with-warning-icon-free-vector.jpg)
