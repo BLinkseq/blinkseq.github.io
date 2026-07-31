@@ -1,7 +1,7 @@
 ---
 title: Barcode clashing
 sidebar:
-  order: 3
+  order: 4
 ---
 
 By the nature of linked read technologies, there will (almost always) be more DNA fragments than unique barcodes for them. As a result,

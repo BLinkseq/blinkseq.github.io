@@ -12,7 +12,11 @@ export default defineConfig({
         src: './src/assets/logo.svg',
       },
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/BLinkseq' }],
-			sidebar: [
+      sidebar: [
+        {
+          label: 'About',
+          link: 'blinkseq',
+        },
 				{
 					label: 'Linked Reads',
 					items: [{ autogenerate: { directory: 'info' } }],
