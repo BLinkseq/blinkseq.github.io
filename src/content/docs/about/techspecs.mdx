@@ -10,8 +10,8 @@ import { Badge } from '@astrojs/starlight/components';
 BLink-seq libraries are characterized by having a three 12bp segments and 1 variable-length "stagger" that
 comprise a combinatorial barcode. The segments each have a small spacer between them and the stagger serves
 to balance fluorescence during sequencing, along with acting as the 4th segment in the barcode. Each of the
-segments could be one of 96 unique barcodes, and the stagger can be 0-6 bases long, resulting in ~5 million
-(96^3 * 6) possible unique barcodes.
+segments could be one of 96 unique barcodes, and the stagger can have a handful of length variants, resulting
+in ~7 million possible unique barcodes.
 
 The libraries are also flanked with Universal Dual Index sequences, which serves 3 functions:
 1. provides a sample-level barcode in the index reads for demultiplexing

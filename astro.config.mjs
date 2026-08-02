@@ -13,6 +13,7 @@ export default defineConfig({
       logo: {
         src: './src/assets/logo.svg',
       },
+      favicon: './src/assets/logo.png',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/BLinkseq' }],
       plugins: [starlightUiTweaks({
         navbarLinks: [

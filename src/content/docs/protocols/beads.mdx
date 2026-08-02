@@ -56,17 +56,506 @@ the final transposome-active haplotagging bead stock, as the best long-term stor
 loading seems to be consistent for beads stripped and/or loaded at different times, though test loading can be repeated as
 needed to confirm the appropriate Tn5 loading concentration.
 
-**Materials and Equipment Required:** see [Appendix A]() and [BLinkBead_oligos.xlsx]()
+**Materials and Equipment Required:** see [Appendix A](#appendix-a-materials-and-equipment-required) and [BLinkBead_oligos.xlsx](https://github.com/BLinkseq/BLinkseq-Protocol/blob/main/BLinkBead_oligos.xlsx)
 
-**Duplex-oligo stocks:** see [Appendix B]() to prepare duplex-oligo stocks used in ligation reactions
+**Duplex-oligo stocks:** see [Appendix B](#appendix-b-preparation-of-duplex-oligo-stocks) to prepare duplex-oligo stocks used in ligation reactions
 
-Technology development: Jennifer Grenier[^1] designed BLink beads, modified from the original ‘haplotagging beads’
-designed by Frank Chan[^2] and Marek Kucka[^2]. All of the authors of the manuscript _BLink-
-seq delivers population-scale haplotypes without long reads: a scalable framework for non-model genomics_ contributed to
+**Technology development:** Jennifer Grenier[^1] designed BLink beads, modified from the original ‘haplotagging beads’
+designed by Frank Chan[^2] and Marek Kucka[^2]. All of the authors of the manuscript 
+_BLink-seq delivers population-scale haplotypes without long reads: a scalable framework for non-model genomics_ contributed to
 developing BLink-seq.
 
 [^1]: Genomics Innovation Hub, Biotechnology Resource Center, Institute of Biotechnology, Cornell University, Ithaca, NY.
 [^2]: Friedrich Miescher Laboratory of the Max Planck Society, Tübingen, Germany; https://doi.org/10.1073/pnas.2015005118
 
 
-![](https://static.vecteezy.com/system/resources/previews/016/029/861/non_2x/flat-under-construction-sign-background-design-with-warning-icon-free-vector.jpg)
+
+
+## Section 1: Split-pool ligations to generate combinatorial barcodes
+### Binding of 2xBiotinylated oligo duplex to beads
+#### Day 1 _mid-afternoon_
+<Steps>
+1. Prepare 25µM 2xBiotin-TS5P oligo-duplex stock, if needed (see Appendix B).
+2. Mix the M-280 streptavidin bead bottle well to ensure beads are fully resuspended.
+3. Transfer 3mL of M-280 streptavidin beads to a 5mL tube and place on a magnetic stand.
+4. Remove storage buffer and add 5ml of streptavidin binding buffer with Triton (1x [SBB+T](#5x-streptavidin-binding-buffer-sbb)). Mix well off-magnet,
+return to magnet. Wait for the beads to pellet and the buffer to clear.
+5. Remove the buffer and replace with 4 mL 1x [SBB+T](#5x-streptavidin-binding-buffer-sbb). Remove from magnet and mix well to resuspend the beads.
+6. In a separate tube, combine 1 mL 1x [SBB+T](#5x-streptavidin-binding-buffer-sbb) with 5 µl 25µM 2xBiotin-TS5P oligo-duplex. Mix well by gently
+vortexing.
+7. Transfer 1 mL 2xBiotin-TS5P oligo-duplex diluted in 1x [SBB+T](#5x-streptavidin-binding-buffer-sbb) to the beads (final concentration 0.025 µM).
+Immediately close the tube and invert to mix well.
+8. Place the beads on a rotator for 30 minutes at room temperature (RT), and then rotate overnight at 4°C.
+</Steps>
+
+#### Day 2 _morning_
+Prepare for split-pool ligations by
+  - preparing oligo-duplex stocks, if needed (see Appendix B), or thawing stocks on ice
+  - preparing [1x WASH buffer+biotin](#10x-wash-buffer) (50mL minimum, prepare more as needed)
+  - bringing the beads to room temperature on the rotator.
+<Steps>
+9. Pulse-spin the beads, place on magnet, and remove the buffer when clear.
+10. Add 5 mL of WASH+biotin buffer. Mix by inverting, rotate 10 min at RT.
+11. Return to magnet, wait to clear, and remove the wash. Take care with any liquid in the lid.
+12. Repeat the wash with another 5 mL of WASH+biotin buffer for 10 min at RT.
+13. Return to magnet, wait to clear, and remove the wash. Take care with any liquid in the lid.
+14. Add 500 µL WASH+biotin buffer; close and flick the tube to fully disperse the beads.
+</Steps>
+
+### Split-pool ligation: Stagger oligos
+
+<Steps>
+15. Prepare Stagger-Ligation MM for 1 strip (8 reactions, 35 µl per reaction plus 5% excess). Hold on ice.
+This ligation reaction is 2.4x more concentrated than 96x barcode-ligations.
+    | | Volume | Reagent |
+    |:--: |----:|---:|
+    | | 149 µl | 2x StickTogether buffer |
+    | | 128 µl | nuclease-free (NF) water |
+    | | 21 µl | T7 ligase |
+    | Total | 298 µl | 1x StickTogether buffer |
+16. In a PCR strip tube, dilute 8 stagger-duplex oligos to 2.5µM in 1x StickTogether buffer. Hold on ice.
+    | | Volume | Reagent |
+    |:--: |----:|---:|
+    | | 15 µl | 2x StickTogether buffer |
+    | | 12 µl | NF water |
+    | | 3 µl | 25 µM stagger-duplex stock |
+    | Total | 30 µl | for each of 8 stagger-duplex oligos |
+</Steps>
+
+#### Split beads into a PCR strip
+<Steps>
+17. Aliquot 50 µl of beads to one 8-well PCR strip.
+18. Bring the volume of the leftover beads to over 400 uL with WASH+biotin and aliquot 50 µl into each well in the strip.
+19. Bring the volume of the leftover beads to 50 uL with WASH+biotin and aliquot 10 µl into each well.
+At this point, there is ~110 µl volume (containing beads) in each well in the strip.
+20. Place the strip on a plate magnet; wait to clear.
+</Steps>
+
+#### Ligate the stagger-duplexes
+<Steps>
+21. On magnet, remove all WASH+biotin buffer from the strip.
+22. Remove strip from magnet. With a multichannel pipet, add 25 µl of the diluted stagger-duplex oligo stocks from step
+17 to the strip. Immediately close the lids and flick to mix until beads are fully re-suspended.
+Briefly pulse-spin if needed to collect the liquid at the bottom of the tube, but the beads should stay fully re-suspended.
+23. Add 35 µl Stagger-Ligation MM to each tube, then immediately close and flick to mix. Briefly pulse-spin if needed.
+24. Incubate in the Thermomixer for at least 15 min at 24°C, shaking at 800 RPM.
+25. After 15 min ligation, pulse-spin the strip and place on a plate magnet.
+26. Remove the supernatant, leaving the strip on the magnet.
+27. Add 200 µl of WASH+biotin per well on-magnet, pipet up and down to rinse, then remove all the wash.
+28. Add 150 µl of WASH+biotin buffer per well (optional: re-rack tips). Close strips, invert to mix, rotate 10 min at RT.
+29. Pulse-spin, place on magnet and remove wash when clear (optional: using re-racked tips).
+30. Repeat the washing step with another 150 µl WASH+biotin buffer (optional: re-racking tips), rotate 10 min at RT.
+31. Pulse-spin, place on magnet and remove wash when clear (optional: using re-racked tips).
+32. Add 50 µl of WASH+biotin buffer per well.
+</Steps>
+
+#### Pool all beads back to one tube
+<Steps>
+33. Transfer all beads from the strip into a new 5 ml tube containing 3 mL WASH+biotin buffer, and place on magnet.
+Rinse the strip with more WASH+biotin buffer and transfer to the 5 ml tube to recover all of the beads.
+34. Remove buffer, wash again with 5mL WASH+biotin buffer.
+</Steps>
+
+#### Split-pool ligation: barcode segment 1
+<Steps>
+35. Prepare Ligation MM for 12 strips (96 reactions, 7 µl per rxn, 108x with excess):
+    | | Volume | Reagent |
+    |:--: |----:|---:|
+    ||378 µl| 2x StickTogether buffer |
+    ||324 µl| NF water |
+    ||54 µl| T7 ligase |
+    |Total|754 µl|  |
+36. Divide the Ligation MM into 8-well strip reservoir, ~90 µl per well. Hold on ice.
+37. Dilute the Segment1 barcode-duplex stocks to 1 µM in 1x StickTogether buffer in a new 96 well plate:
+    - Combine 780 µl 2x StickTogether and 620 µl NF water in a 1.5ml tube and mix well.
+    - Using a strip-reservoir and a multichannel pipet, distribute 9 µl to each well in a 96 well plate.
+    - Transfer 1 µl of the 10 µM segment 1 barcode-duplex oligo stocks to each well. Hold on ice.
+  
+</Steps>
+_The diluted stocks can be mixed by pipetting at the transfer step, or the plate can be sealed and vortexed/pulsed down._
+
+#### Split beads evenly into PCR strips
+The goal is to evenly distribute the beads into 96 tubes (12 x 8-well strips) with a multichannel pipet, using a PCR strip as a
+reservoir. Beads need to stay well mixed/resuspended during this process.
+<Steps>
+38. Number 12 PCR-strip tubes for the first barcode-ligation reaction. Each strip needs a number, but not each well.
+39. Mix the beads well (in 5mL WASH+biotin buffer), and transfer **~200 µl** x 8 into a PCR strip tube reservoir.
+40. With a multichannel pipet, transfer **50 µl** of beads to each numbered strip. Mix and refill the strip-reservoir as needed.
+41. Bring the volume of the leftover beads to **5mL** with WASH+biotin. Mix well and transfer to the strip-reservoir.
+42. With a multichannel pipet, transfer another **50 µl** of beads to each strip. Mix and refill the strip-reservoir as needed.
+43. Bring the volume of the leftover beads to **1mL** with WASH+biotin and transfer to the strip-reservoir.
+44. With a multichannel pipet, transfer another **~10 µl** of beads to each strip. Mix and refill the strip-reservoir as needed.
+    - At this point, the 12 strip tubes contain ~110 µl volume (with beads) in each well.
+45. Place strips on plate magnet.
+</Steps>
+#### Add segment1-duplexes (in 1x StickTogether)
+<Badge text="one strip at a time" variant="success" />
+<Steps>
+46. On magnet, remove all WASH+biotin buffer from one strip.
+    - _optional: reuse tips for multiple strips, they are identical_
+47. Remove strip from magnet. With a multichannel pipet, add **5 µl 1 µM segment1-duplex** (prepared in step 37) to the
+beads, matching the column with the strip number. Close and flick (or invert over a bar magnet) until the beads are fully
+re-suspended.
+48. Repeat for each strip / segment1-duplex column, leaving the strips off-magnet at RT. Do not continue until all
+segment1-duplexes have been added and each strip is mixed well.
+</Steps>
+
+#### Add Ligation MM
+<Badge text="one strip at a time" variant="success" />
+<Steps>
+49. With a multichannel pipet, add **7 µl Ligation MM** to each well in strip 1, then immediately close and flick to mix.
+    - **Briefly** pulse-spin to collect most liquid at the bottom but not pellet the beads, and leave the strip off-magnet.
+50. Proceed with adding **7 µl Ligation MM** per well to the other strips, mixing each strip **immediately**.
+51. Incubate in the Thermomixer for **15 min** at **24°C**, **800 RPM**.
+52. After **15 min** ligation, pulse-spin and place the strips on magnet.
+53. Quick rinse on-magnet: add **100 µl** of WASH+biotin per well, then immediately remove all of the wash.
+54. Slow wash: add **150 µl** of WASH+biotin buffer per well (re-racking tips).
+    - Close strips, invert to mix, rotate **10 min** at RT.
+    - Pulse-spin, place on magnet and remove wash when clear (using the same tips used to add the wash for each strip).
+55. Repeat the slow wash step with another **150 µl WASH+biotin buffer** (re-racking tips).
+    - Close strips, invert to mix, rotate **10 min** at RT.
+    - Pulse-spin, place on magnet and remove wash when clear (using the same tips used to add the wash for each strip).
+56. Add **50 µl** of WASH+biotin buffer to each strip.
+</Steps>
+
+#### Pool all beads back to one tube
+<Steps>
+57. Consolidate all beads to one strip using a multichannel with one set of tips as follows:
+    - Place one strip on the magnet – all of the beads will consolidate to this strip.
+    - Resuspend the beads in another strip and transfer to the strip on the magnet.
+    - Use the buffer in the magnet-strip to back-rinse the empty strip as needed, to collect all of the beads on-magnet.
+    - Repeat with each additional strip, removing the buffer in the strip on the magnet when it fills up (~4 strips = 200 µl).
+58. Transfer all beads from the consolidated strip into a new 5 ml tube containing **3 mL WASH+biotin buffer**, and place on
+magnet. Wash the strip with more WASH+biotin buffer and transfer to the 5 ml tube.
+59. Remove buffer, wash again with **5mL WASH+biotin buffer**.
+</Steps>
+
+#### Repeat steps 38-59 two more times
+You will need to repeat the split-pool ligations for barcode segments 2 and 3.
+The full process of ligating the stagger duplexes and all 3 barcode segments typically requires 2 days. The best time to stop
+is in the second wash step after the ligation reaction or after pooling all of the beads (rotate overnight at 4°C).
+Briefly:
+<Card title="Setup">
+  - Prepare more of the Ligation MM
+  - Dilute the next plate of barcode segment-duplex oligos in 1x StickTogether buffer
+  - Evenly divide the bead stock to 96 wells in new numbered strips and place on magnet
+</Card>
+  - Remove buffer from beads, add **5 µl 1 µM** segment2 or segment3 duplex oligos.
+  - <Badge text="one strip at a time" variant="success" /> add **7 µl Ligation MM**, close/mix/quick pulse.
+  - Incubate **15 min** at **24°C**, **800 RPM**.
+  - Pulse-spin, place on magnet, when clear do a quick rinse with **100 µl** of WASH+biotin buffer
+  - Two slow washes with **150 µl** of WASH+biotin buffer (re-racking tips)
+        - <Badge text="stop here after ligating segment3!" variant="tip" />
+  - Final **50 µl** of WASH+biotin buffer, then repool all beads using the consolidation method
+  - Pool all beads from the consolidated strip into a ne
+
+#### Ligate Ph-shortME/MErev-LIG (TGG overhang)
+<Steps>
+60. Prepare ME-duplex Ligation MM for 12 strips (96 reactions, 12 µl per rxn): 108x recipe
+    | | Volume | Reagent |
+    |:--: |----:|---:|
+    | | 648 µl | 2x StickTogether buffer |
+    | | 513 µl | NF water |
+    | | 54 µl | T7 ligase |
+    | | 1 µl | 10 µM dup |
+61. Divide into 8-well strip reservoir, ~160 µl per well. Hold on ice.
+62. Place strips on magnet and remove all WASH+biotin buffer
+    - OK to reuse tips
+63. One strip at a time, add **12 µl MEduplex ligation MM** to each well, immediately close and invert to mix.
+64. Incubate in the Thermomixer for **15 min** at **24°C**, **800 RPM**.
+65. After 15 min ligation, pulse-spin and place the strips on magnet.
+66. Add **100 µl** of WASH+biotin per well on-magnet (quick-rinse), then remove all the wash from the strips.
+67. Add **50 µl** of WASH+biotin buffer per well.
+68. Pool all beads using the consolidation method.
+69. Transfer all beads from the consolidated strip into a new 5 ml tube containing **3 mL WASH+biotin buffer**, and place on
+magnet. Wash the strip with more WASH+biotin buffer and transfer to the 5 ml tube to collect all of the beads.
+70. Remove buffer, add **5mL WASH+biotin buffer**. Remove from magnet.
+</Steps>
+<center>
+**Safe stop: store at 4°C (do not freeze beads!)**
+</center>
+
+## Section 2: Strip duplex oligos from beads and anneal ME-REV oligo
+At this point, BLink beads have completed the split-pool ligation steps but still have the full barcode-duplex oligos. The
+reverse-strand oligos do not get ligated to each other because there is no 5’ phosphate, and are not attached to the beads
+other than by the duplex hybridization. These oligos are removed with 2 rounds of NaOH denaturation and wash steps.
+Then the ME-REV oligo is annealed to the bead stock prior to the final step of loading Tn5 protein.
+In the standard stripping protocol below, 415µl of the ligated bead stock is stripped with 1mL 0.15M NaOH. This can be
+scaled down if desired, or scaled up by processing multiple tubes of 415µl of the ligated beads in parallel.
+These steps require 2 Thermomixers with 1.5mL blocks, one set to 55°C and a second set to 40°C. If only 1
+Thermomixer is available, remove the block from the base immediately after the final incubation at 55°C to promote
+rapid cooling to 40°C.
+<Steps>
+1. Prepare buffers: volumes indicated are sufficient to strip 1 tube of 415µl of ligated bead stock, and can be scaled as
+needed for a smaller volume of beads or for multiple tubes stripped in parallel.
+    - Prepare 2.2 ml NaOH stripping buffer. Hold at room temperature.
+    - Prepare 6 ml WASH+T buffer.
+        - Transfer 1.2mL WASH+T buffer to a new tube and pre-warm in a Thermomixer at 55°C. _Use the heated lid if available_
+        - Transfer 1.1 mL WASH+T buffer to another tube and add 11µl 100 µM ME-REV oligo. Hold on ice. _The final concentration is 1 µM ME-REV oligo_
+        - Save the remaining WASH+T buffer at room temperature.
+2. Mix the ligated bead stock by inversion or rotation until fully dispersed in suspension.
+3. Transfer 415µl to new 1mL tubes and place on magnet.
+    - The timing of the stripping steps should not be extended: if processing more than 4 tubes in parallel, consider processing in smaller batches to avoid excessive incubation in NaOH.
+4. Remove all WASH+T buffer from the beads and remove from magnet.
+5. Add 1 mL NaOH stripping buffer. Immediately close the tube and mix by inverting several times until no bead pellet
+is visible. Incubate the tube on a rotator for max 1 min at room temperature, then pulse spin and place on magnetic
+rack (the beads should be in contact with NaOH for at most 2 minutes).
+6. On magnet, as soon as the beads are pelleted, remove all NaOH stripping buffer (save the waste for appropriate
+disposal).
+7. Remove the tube from the magnetic rack and immediately add 1.2 mL warm WASH+T buffer. Mix by inverting until
+no bead pellet is visible.
+8. Rotate beads in WASH+T buffer for 1 min at room temperature; pulse-spin and return to magnet.
+9. While beads are washing:
+    - Refill the pre-warmed WASH+T tube to 1.2mL and pre-warm on the Thermomixer at 55°C.
+    - Pre-warm the tube of WASH+T buffer containing 1 µM ME-REV to 55°C in the Thermomixer.
+10. Repeat NaOH stripping steps:
+    - On magnet, remove WASH+T buffer from the beads
+    - Add 1mL NaOH stripping buffer, mix, rotate max 1min at room temperature, pulse spin, and return to magnet.
+    - As soon as beads have pelleted, remove NaOH stripping buffer (save the waste for appropriate disposal)
+    - Add 1.2mL warm WASH+T, rotate 1 min at room temperature, pulse and return to magnet.
+11. When beads have pelleted, remove all WASH+T buffer and add 1 mL warm WASH+T buffer with 1 µM ME-REV.
+12. Rotate the tube for 5 min at room temperature.
+13. Transfer the tube to a Thermomixer set to 40°C for 5 min at 800 RPM.
+14. Return to the rotator at room temperature and continue to mix for another 15 min.
+15. Prepare WASH+T+Biotin buffer: in a new tube, combine 1.4mL WASH+T buffer and 3.5uL 200mM Biotin.
+    - Vortex to mix; hold at room temperature.
+16. After the 15 min incubation, pulse-spin the tube containing the annealed beads and place on a magnet.
+17. When beads have pelleted, remove the WASH+T+ME-REV buffer.
+18. Add fresh 1.2 mL Wash+T+Biotin buffer and rotate for another 20 min at room temperature.
+    - The tube now contains beads ready for Tn5 loading.
+</Steps>
+<center>
+**Store the stripped beads annealed with ME-REV in WASH+T+Biotin buffer at 4°C**
+</center>
+
+## Section 3: Tn5 loading
+Small scale Tn5 loading to find the optimal Tn5 concentration
+
+_Goal: Titrate amount of Tn5 protein to achieve optimal tagmentation of gDNA to approximately 450-1200bp library size._
+
+At this point, BLink beads have been annealed with ME-REV and are ready to load Tn5. The protocol describes loading 4
+different Tn5 concentrations, but can be scaled to as many test loads as desired. Typically, 25µl of the ME-REV annealed
+bead stock is loaded in a final volume of 50 µl.
+ME-B/ME-REV duplexed oligos (ME-B duplex) can also be added during the bead load. While this ME-B is not sufficient
+to generate the appropriate insert sizes for Illumina sequencing, it may help to make tagmentation more efficient on the
+bead surface. ME-B transposome is supplemented during library prep as well. See Appendix B to prepare 50 µM ME-
+B/ME-REV duplexed oligo stock; make additional dilutions in 1x Annealing buffer after duplex formation.
+Diagenode unloaded Tn5 protein is very concentrated (approx. 100µM), and can be diluted to prepare a working stock in
+30% or 50% glycerol storage buffer. If preparing excess diluted unloaded Tn5 protein stock, dilute in 50% glycerol storage
+buffer and store the remainder at -20 °C. The typical loading amount is ~8nM Diagenode unloaded Tn5 protein, or 4µl of a
+1:1000 dilution of the primary unloaded Tn5 stock per 50µl bead load.
+
+Example for 4 test loads:
+| Load 1 | Load 2 | Load 3 | Load 4 | Bead loading reagents |
+|:--:|:--:|:--:|:--:|:---|
+|46|45|44|43| µl 30% glycerol storage buffer |
+|1|1|1|1| µl 0.2µM /ME-REV duplex oligos (optional) |
+|3|4 |5|6| µl unloaded Tn5 protein (1:1000 dilution) |
+
+<Steps>
+1. Mix the stock of BLink beads annealed with ME-REV on a rotator until fully dispersed.
+It can help to lift the beads out of the bottom of the tube on a magnetic rack before placing on the rotator.
+2. Transfer 100µl to a new 1.5 ml tube (sufficient for 4 tests using 25µl orig beads/test) on a magnetic stand.
+3. When the beads have pelleted on the magnet and the WASH+T buffer is clear, remove the WASH+T buffer.
+4. Remove the tube from the magnetic rack and add 105µl of WASH+T buffer. Mix well.
+5. Aliquot 25µl into 4 wells of a new PCR strip and place on a magnetic stand.
+6. When the beads have pelleted on the magnet and the WASH+T buffer is clear, remove the WASH+T buffer.
+7. Remove the strip from the magnetic rack and add 30% glycerol storage buffer (volume based on the test loading plan).
+Close the strip and flick to disperse the beads.
+8. Optional: add ME-B duplex oligos to each tube, final concentration 4nM. Close the strip and flick to mix.
+9. Add unloaded Tn5 protein (diluted) to bring volume to 50 µl. Immediately close the strip and flick to mix well.
+10. Rotate at least 10 minutes at room temperature, then overnight (or longer) at ~4°C. Beads may continue to load over
+several days.
+</Steps>
+
+<center>
+    **Store Tn-5 loaded BLink beads at 4°C**
+</center>
+
+<Steps>
+11. Follow the ‘BLink-seq: library prep protocol’ with a control gDNA sample to test Tn5 loading, using 5µl of the
+Tn5-test loaded beads per library. It is also important to titrate the ME-B transposome (in solution) to optimize
+yield and fragment size distribution, e.g. prepare libraries with 2 or more ME-B dilutions per bead test load.
+Typically, bead performance will plateau and adding more Tn5 will not alter library yield or size distribution
+above the optimal loading concentration.
+</Steps>
+
+## Batch loading of Tn5
+_After determining the optimal amount of Tn5 to use per 50µl bead load, the loading protocol can be scaled up as desired.
+Maintain the same Tn5:bead ratio, scaling the volume up to max 500µl loaded beads per 1.5mL tube.
+The final volume of loaded beads will be double the starting volume of annealed, unloaded beads._
+
+For example:
+<Steps>
+1. Mix the stock of BLink beads annealed with ME-REV on a rotator until fully dispersed.
+It can help to lift the beads out of the bottom of the tube on a magnetic rack before placing on the rotator.
+2. Transfer the desired volume of beads to one or more 1.5mL tube (max 250µl annealed bead stock per tube, to load
+in max 500µl 30% glycerol storage buffer).
+3. Place on a magnetic rack. When the beads have pelleted on the magnet and the WASH+T buffer is clear, remove
+the WASH+T buffer.
+4. Remove the tubes from the magnetic rack and add 500µl fresh WASH+T per tube. Mix well to disperse the beads.
+5. Pulse spin and place the tubes back on the magnet.
+6. Prepare a loading master mix containing 30% glycerol storage buffer, ME-B duplex (optional), and unloaded Tn5
+protein, with total volume sufficient for the batch load.
+7. Remove the WASH+T from the beads and add up to 500µl loading master mix. Immediately mix to disperse the
+beads.
+8. Place the tube(s) on rotator at room temperature for minimum 10 minutes, then rotate overnight or longer at 4°C.
+The loading performance appears to improve after incubating at 4°C for several days.
+9. Pulse spin down the tubes. If several tubes are loaded per batch, they can be mixed together to ensure the batch is
+homogeneous.
+    <center>**Store Tn-5 loaded BLink beads at 4°C**</center>
+</Steps>
+<Card title="Recommended">
+Run final library prep tests to confirm the batch is performing as expected. The amount of ME-B
+transposome required during library prep may need to be optimized for each batch.
+</Card>
+
+
+## Appendix A: Materials and Equipment Required
+| Reagent | Source |
+|:---|:----|
+| Dynabeads™ M-280 Streptavidin | ThermoFisher #11206D |
+| T7 ligase (with 2x StickTogether buffer) | New England Biolabs #M0318L |
+| D-Biotin | Invitrogen #B1595 or equivalent |
+| Unloaded Tn5 protein | Diagenode #C01070010 |
+| Tris pH8 | available from many suppliers |
+| NaCl | available from many suppliers |
+| NaOH | available from many suppliers |
+| EDTA | available from many suppliers |
+| Glycerol | available from many suppliers |
+| Triton X-100 | available from many suppliers |
+| Nuclease-free water | available from many suppliers |
+| HEPES pH 7.3 | ThermoFisher # J16924 or equivalent |
+| DMSO (dimethylsulfoxide) | available from many suppliers |
+
+
+### Oligo duplexes and custom oligos
+For oligo sequences, see [BLinkBead_oligos.xlsx](https://github.com/BLinkseq/BLinkseq-Protocol/blob/main/BLinkBead_oligos.xlsx)
+
+| | |
+|:---|:---|
+| 2xBiotin-TS5P duplex | 2xBio-TS5P-5p-ACA / TS5P-5pRev |
+| Stagger-duplexes | TS5P-3p-S[0-7] / TS5P-3pRev-S[0-7], 8-plex series with staggered lengths |
+| Barcode-duplexes | 12nt BC duplexes with 3nt sticky ends, 3 x 96-well plates <br></br> Segment 1 = 5’Phos-CGA-12ntBC / 12ntRCBC-TTC<br></br>Segment 2 = 5’Phos-CTA-12ntBC / 12ntRCBC-TCG<br></br>Segment 3 = 5’Phos-CCA-12ntBC / 12ntRCBC-TAG<br></br> |
+| ME-LIG-duplex | Ph-shortME / MErev-LIG-TGG |
+| ME-REV-X | `/5Phos/CTGTCTCTTATACACATCT/3InvdT/`<br></br>_recommended but not required: add 3’Inverted-dT to block 3’ extension of the ME-REV oligo_ |
+| ME-B |  `GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG` |
+
+### Equipment and supplies
+- pipettors (including multichannels)
+- filtered pipet tips
+- 96-well plates
+- reagent reservoirs
+- vortex (tube and plate)
+- mini-centrifuge (tube, strip tube, and plate)
+- thermomixer(s) with tube and 96-well plate adapters
+- tube and plate rotator
+- thermocycler
+- magnetic racks (tube and plate)
+- tubes:
+  - 1.5mL
+  - 5mL
+  - 200ul PCR strip tubes
+  - 15mL and 50mL falcon tubes
+
+
+### Buffer Recipes
+- Buffers containing 0.1% Triton should be prepared fresh daily. **Do not store long term.**
+- **Recommended**: mix by inversion, as vortexing will generate foam.
+
+<Card title="">
+    ### 10x Annealing buffer
+    - Store: room temperature
+    - 1x Annealing buffer: dilute 10-fold in NF water, store at room temperature
+
+    | | volume | stock reagent | 10x conc. |
+    |--:|---:|---:| :---| 
+    | | 5 mL | 5 M NaCl |  500 mM |
+    | | 5 mL | 1 M Tris, pH 8.0 | 100 mM |
+    | | 40 mL | NF water | |
+    | total | 50 mL | |
+</Card>
+
+<Card title="">
+    ### 5x Streptavidin binding buffer (SBB)
+    - Store: room temperature
+    - 1x SBB+T: dilute 5-fold in NF water and add 1:100 vol 10% Triton X-100 (final 0.1%)
+
+    | | volume | stock reagent | 5x buffer |
+    |--:|---:|---:| :---| 
+    | | 30 mL | 5 M NaCl | 3 M |
+    | | 2.5 mL | 1 M Tris, pH 8.0 | 50 mM |
+    | | 250 µl | 500 mM EDTA | 2.5 mM |
+    | | 17.25 mL | NF water | |
+    | total | 50 mL | | |
+</Card>
+
+<Card title="">
+### 10x WASH buffer
+    - Store: room temperature
+    - To prepare 200mM D-Biotin, dissolve 49mg D-Biotin in 1mL DMSO
+    - 1x WASH+T, dilute 10-fold in NF water and add 1:100 vol 10% Triton X-100 (final 0.1%)
+    - 1x WASH+biotin: add 125µL 200mM D-Biotin per 50mL 1x WASH+T (final 0.5mM D-Biotin)
+
+    | | volume | stock reagent | 10x buffer |
+    |--:|---:|---:| :---| 
+    | | 3 mL | 5 M NaCl | 300 mM |
+    | | 5 mL | 1 M Tris, pH 8.0 | 100 mM |
+    | | 42 mL | NF water | |
+    | total | 50 mL | |
+</Card>
+
+<Card title="">
+    ### Tn5 dialysis/storage buffer
+    (30% glycerol for loaded beads)
+    - Storage: 4°C
+    - Adjust the glycerol to final 50% to use this buffer for Tn5 protein dilution and storage at 20°C
+    
+    | | volume | stock reagent | final conc. |
+    |--:|---:|---:| :---| 
+    | | 15 mL | 100% glycerol | 30% |
+    | | 2.5 mL | 1 M HEPES pH 7.3 | 50 mM |
+    | | 2 mL | 5 M NaCl | 200 mM |
+    | | 20 µl | 500 mM EDTA | 0.2 mM |
+    | | 1 mL | 10 % Triton X-100 | 0.2 % |
+    | | 29.5 mL | NF water | |
+    | total | 50 mL | 50 mL | |
+</Card>
+
+<Card title="">
+    ### NaOH stripping buffer
+    - Prepare fresh: 0.15 M NaOH, 0.1% Triton
+</Card>
+
+
+## Appendix B: Preparation of duplex-oligo stocks
+### Buffers
+
+| | |
+|:--|:--|
+| 10x Annealing buffer | 100mM Tris pH 8, 500mM NaCl |
+
+### Duplex oligo stocks required for combinatorial barcode ligations
+
+| | |
+|:---|:---|
+| 25µM 2xBiotin-TS5P duplex | 2xBio-TS5P-5p-ACA / TS5P-5pRev |
+| 25µM Stagger-duplexes | TS5P-3p-S[0-7] / TS5P-3pRev-S[0-7], 8-plex series with staggered lengths |
+| 10µM Barcode segment-duplexes | 12nt BC duplexes with 3nt sticky ends, 3 x 96-well plates <br></br> Segment 1 = 5’Phos-CGA-12ntBC / 12ntRCBC-TTC<br></br>Segment 2 = 5’Phos-CTA-12ntBC / 12ntRCBC-TCG<br></br>Segment 3 = 5’Phos-CCA-12ntBC / 12ntRCBC-TAG<br></br> |
+| 10µM ME-LIG-duplex | Ph-shortME / MErev-LIG-TGG |
+
+### Protocol:
+<Steps>
+1. Prepare an equimolar mixture of the top-strand and bottom-strand oligos in 1x Annealing buffer in a PCR tube.
+Dilute each individual oligo to the final concentration desired for the duplex-oligo stock.
+    <Card title="">
+    For example, to prepare 100µl of 25 µM 2xBiotin-TS5P duplex oligos, combine:
+    - 40 µl nuclease-free water
+    - 10 µl 10x Annealing buffer
+    - 25 µl 100µM 2xBio-TS5P-5p-ACA oligo
+    - 25 µl 100µM TS5P-5pRev oligo
+    </Card>
+2. Heat and slowly cool the oligos to promote duplex formation:
+    - 65°C/5min – slow cool 1°C/minute to 22°C.
+3. Store duplex-oligo stocks at -20°C. Dilute in 1x Annealing buffer as needed.
+</Steps>
