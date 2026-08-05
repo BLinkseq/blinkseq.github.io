@@ -10,10 +10,8 @@ export default defineConfig({
 	integrations: [
 		starlight({
       title: '',
-      logo: {
-        src: './src/assets/logo.svg',
-      },
-      favicon: './src/assets/logo.png',
+      logo: { src: '/src/assets/logo.svg'},
+      favicon: '/favicon.png',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/BLinkseq' }],
       plugins: [starlightUiTweaks({
         navbarLinks: [
