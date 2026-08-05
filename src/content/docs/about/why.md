@@ -11,7 +11,7 @@ but we believe linked-read technology should be **accessible**, reproducible, an
 
 BLink-seq was created with those principles in mind. Rather than treating linked-read sequencing as a proprietary
 technology, we aim to empower researchers through comprehensive documentation, clear and human-readable protocols,
-and hands-on collaboration. Our goal is to make it possible for any laboratory to produce its own BLink-beads and
+and hands-on collaboration. Our goal is to make it possible for any laboratory to produce its own BLink beads and
 prepare high-quality linked-read libraries.
 
 We also want to help linked-read sequencing reach its full potential as a research tool. That's why we advocate for

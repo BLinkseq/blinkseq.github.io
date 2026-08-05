@@ -6,7 +6,7 @@ sidebar:
 ---
 
 We call it BLink-seq and it's a genomic sample preparation method to create [linked-read](../../info/linkedreads) data.
-The technology relies on biotinylated magnetic beads coated in combinatorial barcodes (BLink-beads) as the substrate
+The technology relies on biotinylated magnetic beads coated in combinatorial barcodes (BLink beads) as the substrate
 on which to perform tagmentation (fragment + tag). The reaction first binds DNA to the beads, then
 enzymes fragment the DNA and add a molecular barcode to the sheared DNA. Since each BLink-bead is covered in
 a unique combinatorial barcode, all the DNA fragments produced from a single source molecule wrapped around
