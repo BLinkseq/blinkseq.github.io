@@ -29,7 +29,7 @@ formatting.
 There are a handful of linked-read sample preparation methods, but that's largely an implementation detail. All of those methods are
 laboratory procedures to take genomic DNA and do the necessary modifications to fragment long DNA molecules, tag the resulting fragments with the same
 DNA barcode, then add the necessary Illumina adapters. It's not unlike the different RAD flavors (e.g. EZrad, ddRAD, 2B-rad)-- they all give you RAD data in the end,
-but vary in how you get there in terms of cost and bench time. We obviously subscribe to haplotagging :grin:.
+but vary in how you get there in terms of cost and bench time. We obviously subscribe to BLink-seq 🤓.
 
 It's worth describing the obvious differences of the raw (FASTQ) data. Knowing these details might help you 
 make sense of compatibilties/incompatibilities for software, or how you can convert between styles. For more
