@@ -34,7 +34,9 @@ please refer to [the guide on linked-read terminology](../terminology)
 ## singletons
 Having \<60% would be considered decent, but you would want as few singletons as possible in a linked-read dataset.
 For perspective, if 90% of your reads were singletons, you can think of that as "90% of your data aren't linked reads".
-![singletons and linked reads](../../../assets/linked_singletons.svg)
+<center>
+![inferred molecule size](../../../assets/linked_metric.png)
+</center>
 
 ## inferred molecule size
 A molecule will almost never be sequenced in it's entirety, but we can try to estimate how long it was.
@@ -43,12 +45,15 @@ where along the molecule our fragments came from, but we can find the distance b
 sharing a barcode after alignment. If there are 7 fragments in a read cloud, we can infer that the souce molecule
 was the distance between the maximal and minimal mapping positions of the fragments. It's not a perfect calculation,
 but it's the best we can do with the data.
+![inferred molecule size](../../../assets/inferred_size.png)
 
 ## fragments per molecule
 Since all fragments of a single DNA molecule likely won't get sequenced, we are interested in getting an average number of
 fragments per DNA molecule. This is done by getting counts of all the fragments with the same barcode, as unique barcodes
 correspond with unique DNA molecules. It's difficult to say exactly what a good number of fragments per molecule would be,
 but a minimum of 2 is necessary to be considered _linked_. Having 3-6 would be decent, depending on your project goals.
+![fragments per molecule](../../../assets/frags_per_mol.png)
+
 
 ## molecule coverage
 In addition to knowing the count of fragments representing a molecule, it is helpful to understand how many base pairs of
