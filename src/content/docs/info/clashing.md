@@ -5,13 +5,13 @@ sidebar:
 ---
 
 By the nature of linked read technologies, there will (almost always) be more DNA fragments than unique barcodes for them. As a result,
-it's common for barcodes to reappear in sequences. This is referred to as _clashing_ or _convolution_ and often needs to be 
+it's common for barcodes to reappear in unrelated fragments. This is referred to as _clashing_ or _convolution_ and often needs to be 
 dealt with so as to not incorrectly associate fragments with each other.
 
 There are approaches to overcome barcode clashing (_deconvolve_/_deconvolute_) in linked read data by determining which sequences
 are sharing barcodes by chance rather than because they originated from the same DNA molecule. The likelihood of it happening is
 usually low, but it's not impossible. When the algorithm determines that barcodes are being shared by unrelated molecules, the barcode typically
-gets suffixed with a hyphenated number (e.g. `BX:Z:ATACG` becomes `BX:Z:ATACG-1`). As of this writing, there are only a few pieces of software
+gets suffixed with a hyphenated number (e.g., `BX:Z:ATACG` becomes `BX:Z:ATACG-1`). As of this writing, there are only a few pieces of software
 dedicated to deconvoluting linked-read data and do so with varying degrees of success and computational resource requirements. Similarly, linked-read
 software is variable in its flexibility towards accepting the deconvolved-barcode format.
 
