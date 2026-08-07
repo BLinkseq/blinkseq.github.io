@@ -3,12 +3,12 @@
 
 <svg
    width="162.77299mm"
-   height="47.323002mm"
-   viewBox="0 0 162.773 47.323002"
+   height="29.323mm"
+   viewBox="0 0 162.773 29.323"
    version="1.1"
    id="svg1"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
-   sodipodi:docname="frags_per_mol.svg"
+   sodipodi:docname="fragments.svg"
    inkscape:export-filename="frags_per_mol.png"
    inkscape:export-xdpi="120"
    inkscape:export-ydpi="120"
@@ -27,10 +27,10 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.5166698"
-     inkscape:cx="299.34004"
-     inkscape:cy="66.922939"
-     inkscape:window-width="1884"
-     inkscape:window-height="1022"
+     inkscape:cx="355.71354"
+     inkscape:cy="55.3845"
+     inkscape:window-width="1499"
+     inkscape:window-height="805"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -56,9 +56,9 @@
        style="font-size:37.8932px;font-family:'Montserrat Alternates';-inkscape-font-specification:'Montserrat Alternates, Normal';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect10);display:inline;fill:none;stroke:#000000;stroke-width:14.9594;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"><tspan
          x="229.73828"
          y="814.41333"
-         id="tspan8"><tspan
+         id="tspan7"><tspan
            dx="0 16.862463 25.653696 13.982643 22.887497 15.763512 19.969734 25.691566 11.709 9.9279938"
-           id="tspan5">Interval 1</tspan></tspan></text>
+           id="tspan4">Interval 1</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.90109px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Normal';writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:1;stroke-width:0.00938681;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
@@ -72,17 +72,17 @@
          y="330.19571" /></text>
     <path
        style="fill:none;stroke:#a77cc8;stroke-width:3.95801;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
-       d="m 22.348385,329.18488 h 10.20546"
+       d="m 22.348385,329.27724 h 10.20546"
        id="path5"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#a77cc8;stroke-width:3.95801;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
-       d="m 78.181961,329.18488 h 9.63586"
+       d="m 78.181961,329.27724 h 9.63586"
        id="path6"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#a77cc8;stroke-width:3.95801;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
-       d="m 42.293198,329.18488 h 4.807656"
+       d="m 42.293198,329.27724 h 4.807656"
        id="path7"
        sodipodi:nodetypes="cc" />
     <path
@@ -114,7 +114,7 @@
          y="330.96594">fragments </tspan></text>
     <path
        style="fill:none;stroke:#a77cc8;stroke-width:3.95801;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
-       d="m 65.50954,329.18488 h 4.732754"
+       d="m 65.50954,329.27724 h 4.732754"
        id="path24"
        sodipodi:nodetypes="cc" />
     <g
@@ -258,24 +258,5 @@
          style="fill:#787878;fill-opacity:1;stroke-width:0.0208549"
          x="-43.787083"
          y="320.94205">sequenced reads</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:6.44542px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Normal';writing-mode:lr-tb;direction:ltr;fill:#787878;fill-opacity:1;stroke-width:0.0208549;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
-       x="-22.197615"
-       y="344.37949"
-       id="text2"><tspan
-         sodipodi:role="line"
-         id="tspan2"
-         style="fill:#787878;fill-opacity:1;stroke-width:0.0208549"
-         x="-22.197615"
-         y="344.37949">4 fragments in this molecule</tspan></text>
-    <rect
-       style="fill:none;stroke:#9f9f9f;stroke-width:0.414;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill;stroke-dasharray:none"
-       id="rect2"
-       width="98.389908"
-       height="12.037063"
-       x="-28.205013"
-       y="336.67224"
-       rx="2.5356269" />
   </g>
 </svg>

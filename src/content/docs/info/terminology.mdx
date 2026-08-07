@@ -8,6 +8,9 @@ Linked-read data **is** whole genome sequencing (WGS). What that means is that w
 or not, the data will always be standard and viable WGS compatible with whatever you would use WGS for. It's WGS, but with
 a little extra info that goes a long way. But, because linked-read data has an extra dimension (the molecular barcodes),
 there are some additional concepts we need to consider that don't exist in regular WGS or long-read data.
+<center>
+![linked-read terminology](../../../assets/overview.png)
+</center>
 
 ### molecules
 In the linked-read context, the phrase _molecule_ refers to a contiguous length of genomic DNA that went into library
@@ -15,10 +18,10 @@ preparation. Extracted DNA is usually fragmented in some way, be it enzymes or l
 input DNA to be chromosome length.
 
 ### inferred molecules
-Whereas _molecules_ refers to the source DNA molecule, _inferred molecules_ refer to the maximum extent of a molecule
-that we can infer from the sequencing data. If the original DNA molecule was 1Mb and our data included two fragments
-(see below) derived from it with the same barcode that were 75kb apart, we can only infer the molecule to have been
-75kb.
+While _molecules_ refer to the source DNA molecule, _inferred molecules_ refer to the maximum extent of a molecule
+that we can infer from the sequencing data **after alignment**. If the original DNA molecule was 1Mb and our data included two [fragments](#fragments)
+derived from it with the same barcode that were mapped 75kb apart, we can only infer the molecule to have been
+75kb. Without mapping the reads, we cannot infer the sizes and positions of anything beyond the raw sequencing data.
 
 ### fragments
 We typically think about sequencing data in terms of "reads" (e.g., a sequencer gives you 20 million reads for a sample), but
@@ -40,6 +43,9 @@ A read cloud is the collection of all of the sequences that have the same molecu
 This phrase appears often in earlier linked-read literature, but is less common now.
 Referring to something as a read cloud does not explicitly imply that the sequences have been
 deconvoluted (see below). We are unaware of any existing language that makes such a disctinction.
+<center>
+![linked-read terminology](../../../assets/read_clouds.png)
+</center>
 
 ### clashing / convolution
 By the nature of linked read technologies, there will (almost always) be more DNA fragments than _unique_ barcodes for them. As a result,
@@ -53,4 +59,6 @@ represented by two or more fragments, we call that _linked_, and the opposite is
 a **singleton**. Since a singleton isn't actually linked to any other fragment, the barcode information for that read (or read 
 pair) is mostly useless, aka it's just a plain-regular short read and can be used as such. 
 
+<center>
 ![singletons and linked reads](../../../assets/linked_singletons.svg)
+</center>

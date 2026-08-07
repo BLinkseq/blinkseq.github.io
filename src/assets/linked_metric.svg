@@ -26,15 +26,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.2988636"
-     inkscape:cx="93.928262"
-     inkscape:cy="296.79791"
+     inkscape:zoom="1.8368705"
+     inkscape:cx="221.5725"
+     inkscape:cy="68.86713"
      inkscape:window-width="1920"
      inkscape:window-height="1062"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g9" />
   <defs
      id="defs1">
     <marker
@@ -75,9 +75,9 @@
        style="font-size:37.8932px;font-family:'Montserrat Alternates';-inkscape-font-specification:'Montserrat Alternates, Normal';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect10);display:inline;fill:none;stroke:#000000;stroke-width:14.9594;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"><tspan
          x="229.73828"
          y="814.41333"
-         id="tspan8"><tspan
+         id="tspan9"><tspan
            dx="0 16.862463 25.653696 13.982643 22.887497 15.763512 19.969734 25.691566 11.709 9.9279938"
-           id="tspan7">Interval 1</tspan></tspan></text>
+           id="tspan2">Interval 1</tspan></tspan></text>
     <g
        id="g1"
        transform="translate(-12.474982,3.3162119)">
@@ -94,7 +94,7 @@
     </g>
     <g
        id="g8"
-       transform="translate(61.705404,5.4357083)">
+       transform="translate(61.705404,8.2414921)">
       <path
          style="fill:none;stroke:#d8d8d8;stroke-width:3.95801;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
          d="M 27.583744,328.49639 H 48.146656"
@@ -192,7 +192,7 @@
     </g>
     <g
        id="g8-99"
-       transform="translate(61.705404,12.781521)">
+       transform="translate(61.705404,16.177167)">
       <path
          style="fill:none;stroke:#d8d8d8;stroke-width:3.95801;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke"
          d="M 27.583744,328.49639 H 48.146656"
@@ -250,14 +250,14 @@
       <text
          xml:space="preserve"
          style="font-size:6.49623px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Normal';writing-mode:lr-tb;direction:ltr;fill:#676767;fill-opacity:1;stroke:none;stroke-width:0.057722;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
-         x="72.161758"
+         x="63.519341"
          y="361.36066"
          id="text4"><tspan
            sodipodi:role="line"
            id="tspan4"
            style="fill:#676767;fill-opacity:1;stroke:none;stroke-width:0.0577222"
-           x="72.161758"
-           y="361.36066">linked: 5</tspan></text>
+           x="63.519341"
+           y="361.36066">total linked: 5</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:6.49623px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Normal';writing-mode:lr-tb;direction:ltr;fill:#676767;fill-opacity:1;stroke:none;stroke-width:0.057722;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
@@ -293,5 +293,27 @@
          y="371.07596"
          rx="4.4037061" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-size:2.91508px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Normal';writing-mode:lr-tb;direction:ltr;fill:#676767;fill-opacity:1;stroke:none;stroke-width:0.0259018;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       x="57.712234"
+       y="350.28888"
+       id="text4-3"><tspan
+         sodipodi:role="line"
+         id="tspan4-5"
+         style="fill:#676767;fill-opacity:1;stroke:none;stroke-width:0.0259019"
+         x="57.712234"
+         y="350.28888">3 blue fragments</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.91508px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Normal';writing-mode:lr-tb;direction:ltr;fill:#676767;fill-opacity:1;stroke:none;stroke-width:0.0259018;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+       x="87.860382"
+       y="350.28888"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="fill:#676767;fill-opacity:1;stroke:none;stroke-width:0.0259019"
+         x="87.860382"
+         y="350.28888">2 pink fragments</tspan></text>
   </g>
 </svg>
