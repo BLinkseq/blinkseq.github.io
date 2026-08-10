@@ -1,0 +1,29 @@
+---
+title: Archiving Data
+---
+
+:::danger[TL;DR]
+Do not upload linked-reads in FASTQ format, use unaligned BAM instead
+:::
+
+It's common [and often required] practice to upload sequence data onto a public repository. Because linked-read
+barcodes are technical sequences (as opposed to biological ones), storing linked-read data with inline barcode
+sequences would reqiure downstream demultiplexing. The risk there is that technologies may change barcode configurations,
+barcode 'whitelists', or demultuplexing software may no longer be supported, which makes accurate end-user demultiplexing challenging and very brittle.
+
+The natural alternative would seem to be storing the linked-read barcode in the sequence header, which is how haplotagging,
+BLink-seq, stLFR, and TELL-seq all do it, even if they do so in different ways. While on its face this seems like a non-issue,
+NCBI (and possibly others) [reformat the read headers](https://www.ncbi.nlm.nih.gov/sra/docs/sra-data-formats/), effectively
+removing any traces of linked-read information. Obviously this isn't great, so we propose a simple approach to solving this
+problem: **uploading sequence data as unaligned BAM files**.
+
+NCBI accepts unaligned BAM files as a valid data format for submission. This solves multiple problems at once:
+1. All SAM tags are retained, meaning barcodes in the `BX:Z` tag and their validations in `VX:i` are retained 
+2. Conversion between FASTQ and SAM is lossless and effortlessly supported by common tools like `samtools`
+  - `samtools import` converts FASTQ to SAM/BAM
+  - `samtools fastq` converts SAM/BAM to FASTQ
+3. Paired-end read files can be interleaved into a single BAM file and retrieved as such, reducing file tracking
+  - read 1/2 information is stored in a SAM record, so conversions will accurately restore read 1 and read 2
+
+We strongly urge uploading linked-read sequences to NCBI as interleaved unaligned BAM files so as to not waste precious
+linked-read data.
