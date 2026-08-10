@@ -1,5 +1,5 @@
 ---
-title: Why use BLink-seq?
+title: Why use BLink-seq
 sidebar:
   order: 2
 ---

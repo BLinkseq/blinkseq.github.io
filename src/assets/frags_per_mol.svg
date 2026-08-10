@@ -10,8 +10,8 @@
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    sodipodi:docname="frags_per_mol.svg"
    inkscape:export-filename="frags_per_mol.png"
-   inkscape:export-xdpi="120"
-   inkscape:export-ydpi="120"
+   inkscape:export-xdpi="250"
+   inkscape:export-ydpi="250"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -28,9 +28,9 @@
      inkscape:document-units="mm"
      inkscape:zoom="1.5166698"
      inkscape:cx="299.34004"
-     inkscape:cy="66.922939"
-     inkscape:window-width="1884"
-     inkscape:window-height="1022"
+     inkscape:cy="66.593269"
+     inkscape:window-width="1078"
+     inkscape:window-height="805"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -56,9 +56,9 @@
        style="font-size:37.8932px;font-family:'Montserrat Alternates';-inkscape-font-specification:'Montserrat Alternates, Normal';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect10);display:inline;fill:none;stroke:#000000;stroke-width:14.9594;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;paint-order:fill markers stroke"><tspan
          x="229.73828"
          y="814.41333"
-         id="tspan8"><tspan
+         id="tspan7"><tspan
            dx="0 16.862463 25.653696 13.982643 22.887497 15.763512 19.969734 25.691566 11.709 9.9279938"
-           id="tspan5">Interval 1</tspan></tspan></text>
+           id="tspan4">Interval 1</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.90109px;font-family:'URW Gothic';-inkscape-font-specification:'URW Gothic, Normal';writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:1;stroke-width:0.00938681;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"

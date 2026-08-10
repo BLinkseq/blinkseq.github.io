@@ -4,11 +4,11 @@ import starlight from '@astrojs/starlight';
 import starlightUiTweaks from 'starlight-ui-tweaks'
 import starlightScrollToTop from 'starlight-scroll-to-top'
 
-// https://astro.build/config
 export default defineConfig({
 	site: 'https://blinkseq.github.io',
 	integrations: [
-		starlight({
+    starlight({
+      customCss: ['./src/style/global.css'],
       title: '',
       logo: { src: '/src/assets/logo.svg'},
       favicon: '/favicon.png',
@@ -24,22 +24,21 @@ export default defineConfig({
           showProgressRing: true,
           progressRingColor: '#b288f5',
           borderRadius: '50',
-        })
+        }),
       ],
       sidebar: [
         {
           label: 'About',
           items: [{ autogenerate: { directory: 'about' } }],
         },
-				{
-					label: 'Linked Reads',
-					items: [{ autogenerate: { directory: 'info' } }],
-					//items: [
-						// Each item here is one entry in the navigation menu.
-						//{ label: 'What they are', slug: 'info/linked-reads' },
-					//],
-				},
-				{
+        {
+          label: 'Linked Reads',
+          items: [
+            { autogenerate: { directory: 'linkedreads' } },
+            { slug: 'lastq'}
+          ],
+        },
+        {
 					label: 'Protocols',
 					items: [{ autogenerate: { directory: 'protocols' } }],
 				},

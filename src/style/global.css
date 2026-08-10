@@ -1,1 +1,15 @@
 @import "starlight-ui-tweaks/styles";
+
+.card {
+  border-radius: 1.25rem; /* rounder corners, tune to taste */
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.08); /* light drop shadow */
+}
+
+:root[data-theme='dark'] .card {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.4);
+}
+
+/* TOC sidebar width */
+:root {
+  --sl-toc-width: 16rem;
+}
