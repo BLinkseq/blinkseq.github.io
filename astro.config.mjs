@@ -33,10 +33,7 @@ export default defineConfig({
         },
         {
           label: 'Linked Reads',
-          items: [
-            { autogenerate: { directory: 'linkedreads' } },
-            { slug: 'lastq'}
-          ],
+          items: [{ autogenerate: { directory: 'linkedreads' } },],
         },
         {
 					label: 'Protocols',

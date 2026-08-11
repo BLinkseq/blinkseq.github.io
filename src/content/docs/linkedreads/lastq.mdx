@@ -1,6 +1,7 @@
 ---
 title: Standard linked-read data format
 description: A much-needed format standard
+slug: lastq
 sidebar:
   order: 10
 ---
@@ -40,7 +41,7 @@ The Standard (LASTQ) format guarantees `BX:Z` and `VX:i` SAM tags that encode th
 validity. This format is universal and agnostic to all existing linked-read varieties and their particulars.
 It is 100% compliant with comment transfer during alignment and trivial to parse once in SAM format. 
 
-![LASTQ/Standard](../../assets/lastq/lr_standard.png)
+![LASTQ/Standard](../../../assets/lastq/lr_standard.png)
 
 This format makes it the responsibility of the early data processing software 
 (as early as demultiplexing) to encode the data in this format for downstream
