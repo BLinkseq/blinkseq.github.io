@@ -20,7 +20,7 @@ dedicated to deconvoluting linked-read data and do so with varying degrees of su
 software is variable in its flexibility towards accepting the deconvolved-barcode format.
 
 ## Barcode thresholds
-Rather than incorrectly assume that all sequences/alignments with the same barcode
+Rather than naively assume that all sequences/alignments with the same barcode
 originated from the same orignal DNA molecule, linked-read aware programs include a threshold parameter to determine a "cutoff" distance
 between alignments with the same barcode. This parameter can be interpreted as "if a barcode appears more than `X` base pairs away from the
 same barcode (on the same contig), then we'll consider them as originating from different molecules." If this threshold is lower, then
