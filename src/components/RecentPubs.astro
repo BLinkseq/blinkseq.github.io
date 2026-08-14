@@ -1,0 +1,19 @@
+---
+// src/components/RecentPubs.astro
+const term = encodeURIComponent('linked-read sequencing');
+const searchUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=${term}&sort=date&retmax=5&retmode=json`;
+const { esearchresult: { idlist } } = await fetch(searchUrl).then(r => r.json());
+
+const summaryUrl = `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=${idlist.join(',')}&retmode=json`;
+const { result } = await fetch(summaryUrl).then(r => r.json());
+
+const pubs = idlist.map(id => result[id]);
+---
+<ul class="pub-list">
+  {pubs.map(p => (
+    <li>
+      <a href={`https://pubmed.ncbi.nlm.nih.gov/${p.uid}/`} target="_blank">{p.title}</a>
+      <span> {p.source} · {p.pubdate}</span>
+    </li>
+  ))}
+</ul>

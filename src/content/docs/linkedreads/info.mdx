@@ -57,7 +57,7 @@ the barcode **must** stay in the read. Moving the first 16bp into the read heade
 ---
 
 ### Haplotagging
-Unlike the other listed chemistries, haplotagging is a non-commercial (DIY) linked-read chemistry. Haplotagging barcodes are combinatorial and
+Unlike the other listed chemistries, [haplotagging](https://doi.org/10.1073/pnas.2015005118) is a non-commercial (DIY) linked-read chemistry. Haplotagging barcodes are combinatorial and
 are made up of four 6bp segments. Two of these segments ("A" and "C") are the first 12bp of the `I1` read and
 the other two ("B" and "D") are the first 12bp of the `I2` read, both of which are provided by Illumina for standard sequencing runs.
 Because of this segment design, there are `96^4` (~84 million) possible barcode combinations (~900,000 per sample). 
@@ -77,7 +77,7 @@ The barcodes are stored in the sequence header under the `BX:Z` SAM tag, recoded
 
 ---
 ### stLFR
-<strong>Single-Tube Long Fragment Reads</strong>
+<strong>[Single-Tube Long Fragment Reads](https://doi.org/10.1101/gr.245126.118)</strong>
 
 Another of the presently available commercial linked-read options. stLFR data uses combinatorial barcodes
 made up for three 10bp segments which are at the end of the `R2` read. Demultiplexing these data results
@@ -97,7 +97,7 @@ the barcode recoded in the `1_2_3` format, where each segment is an integer.
 
 ---
 #### TELL-seq
-<strong>Transposase Enzyme-Linked Long-read Sequencing</strong>
+<strong>[Transposase Enzyme-Linked Long-read Sequencing](https://pmc.ncbi.nlm.nih.gov/articles/PMC7424984/)</strong>
 
 One of the presently available commercial linked-read options. TELLseq data is very similar to 10X, except the
 barcode is 18bp long and contained in the `I1` read that Illumina provides with the standard `R1` and `R2` reads. The

@@ -1,0 +1,45 @@
+---
+title: Software
+sidebar:
+  order: 99
+---
+
+Linked reads came on the scene in 2016 with the release of 10X Genomics Chromium platform and it was
+met with considerable enthusiasm. 10X themselves released the [LongRanger](https://github.com/10XGenomics/longranger/tree/master)
+software platform that became the go-to for processing their linked reads. During this early and eager adoption
+of linked-read technology, independent research groups also began writing their own tools to do cool things
+with linked-read data. Then, due to [litigation](https://law.justia.com/cases/federal/appellate-courts/cafc/19-2255/19-2255-2020-08-03.html),
+the 10X Chromium linked-read chemistry was discontinued. At the time, there we no published
+alternatives (TELL-seq and stLFR were published in 2020, haplotagging in 2021), so the initial enthusiasm
+regardling linked reads and their software infrastructure quickly waned as researchers pivoted towards existing
+technologies. 
+
+Although 3 years (2016-2019) doesn't seem like much, that brief period resulted in quite a few linked-read specific bioinformatics
+tools, including new assemblers, scaffolders, aligners, phasers, and SV callers. However, many of those tools are
+specific to 10X-style data (or another technology-specific format), or were deprecated/abandoned following the
+discontinuation of 10X Genomics linked-reads. There is an [Awesome-Linked-Reads](https://github.com/pontushojer/awesome-linked-reads?tab=readme-ov-file#tools)
+repository maintained by [Pontus Höjer](https://scholar.google.com/citations?hl=en&user=f5i7b8MAAAAJ&view_op=list_works&sortby=pubdate)
+that lists known linked-read software. Scanning it, you will notice there are many options and that most of them haven't been maintained
+in 2 or more years.
+
+### What this means
+There are now several methods to generate linked-read data from sample tissue or data simulation, 
+so linked-read data is accessible again. The community would benefit significantly from renewed
+bioinformatic and algorithmic interest in linked-reads at all levels: assembly, scaffolding, phasing,
+imputation, alignment, and especially variant calling.
+
+### Our role
+By creating a fully open-source BLink-seq chemistry, we've made linked reads more accessible than ever.
+We also created the BLink-seq organization as stewards and promotors of linked-read chemistry, regardless
+of platform. We've provided a knowledge base on this website of all things linked-read. We created the [LASTQ](/lastq)
+specification to unify linked-read data into a single platform-agnostic and future-proof format. We've been
+developing [Harpy](https://www.github.com/pdimens/harpy), the go-to software suite for linked-read data for the
+last several years. We created the [Djinn](https://www.github.com/pdimens/djinn) linked-read data format converter.
+We wrote [Mimick](https://www.github.com/pdimens/mimick), the linked-read sequence simulator. We are reviving the [Lariat](https://github.com/10XGenomics/lariat)
+barcode-aware aligner as [Arachne](https://www.github.com/pdimens/arachne). Despite creating our own linked-read chemistry, each of these tools remains open and
+compatible with the current popular chemistries[^1]. Our role is to empower the research
+community who wants to use linked-read sequencing.
+
+[^1]: The current most popular linked-read chemistries are stLFR, TELL-seq, and haplotagging.
+There are others like LinkPrep, Illumina SLR, and LoopSeq, but there are few publications featuring their
+adoption. Regardless, our hope is a unified data format that makes the chemistry just an implementation detail.

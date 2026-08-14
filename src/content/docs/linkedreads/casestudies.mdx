@@ -1,0 +1,82 @@
+---
+title: Linked reads in action
+sidebar:
+  order: 11
+---
+import { Card } from '@astrojs/starlight/components';
+import RecentPubs from '../../../components/RecentPubs.astro';
+
+
+We can _say_ that linked reads are great, but it would help to back that up with data. This page documents some
+examples of the cool ways linked reads have been applied to real-world investigations. It's by no means an exhaustive
+list, but it does try to show the breadth of applications in both utility and taxa.
+
+<Card title="Recent Linked-Read Publications" icon="open-book">
+  <RecentPubs />
+</Card>
+
+## Case Studies
+### Assembly
+<Card>
+**Draft assemblies for 177 bird species enhance genus-level coverage**. Guangji Chen _et al._ 2026.
+[Link](https://doi.org/10.1093/gigascience/giag045)
+> Using stLFR, the authors _de novo_ assembled 177 avian genomes from museum specimens and tissue collections representing 161 genera,
+> including 102 newly sequenced at the genomic level. The assemblies average ∼1.2 Gb in size, with scaffold N50 = 8.03 Mb,
+> contig N50 = 120 kb, 93% BUSCO completenes
+
+**Chromosome-level assemblies of two hexaploid bamboos, Thyrsostachys oliveri and Thyrsostachys siamensis, provide a foundation for
+functional and comparative genomics studies**. Chaiwat Naktang _et al._ 2025. [Link](https://doi.org/10.1093/gigascience/giaf142) 
+> Using stLFR + Hi-C, the authors assembled 35 pseudochromosomes for T. oliveri (~990Mbp N50 = 22.18Mbp) and (~1.14Gbp N50 = 19.45Mpb) for T. siamensis.
+> The genomes had 50.9% and 48.8%, respectively and BUSCO scores of 97.4% and 95.2%, respectively. 
+</Card>
+
+### Metagenomics
+<Card>
+**Longitudinal linked-read sequencing reveals ecological and evolutionary responses of a human gut microbiome
+during antibiotic treatment**. Morteza Roodgar _et al._ 2021. [Link](https://doi.org/10.1101/gr.265058.120)
+> Metagenomic study tracked the longitudinal trajectories of thousands of single nucleotide variants within 36 species.
+> They found that antibiotics can drive rapid shifts in the genetic composition of individual species.
+
+**A comprehensive investigation of metagenome assembly by linked-read sequencing**. Lu Zhang _et al._ 2020.
+[Link](https://link.springer.com/article/10.1186/s40168-020-00929-3)
+> Linked reads improve assemblies over regular short reads, but read depth still matters.
+</Card>
+
+### Linkage Mapping
+<Card>
+In both of these incredible studies, the authors created entire linkage maps without crossing
+individuals and sequencing their offspring.
+
+**Linked-read sequencing of gametes allows efficient genome-wide analysis of meiotic recombination**.
+Hequan Sun _et al._ 2019.[Link](https://www.nature.com/articles/s41467-019-12209-2)
+> The authors were able to create a linkage map of the recombination landscape by sequencing **only**
+the gametes (pollen) and not having to sequence any recombinant offspring.
+
+**Genome-wide recombination map construction from single individuals using linked-read sequencing**.
+Andreea Dréau _et al._ 2019. [Link](https://www.nature.com/articles/s41467-019-12210-9#Sec11)
+> Using a single individual and their sperm, the authors created linkage maps for a mouse and a stickleback (fish).
+</Card>
+
+### Finding Variants
+<Card>
+**Linked-read sequencing identifies abundant microinversions and introgression in the arboviral vector Aedes aegypti.**
+Seth N. Redmond _et al._ 2020. [Link](https://link.springer.com/article/10.1186/s12915-020-0757-y)
+> By leveraging linked-read aware mapping via Lariat (10X Genomics), the authors were able to get good sequence 
+> alignment in the highly repetitive mosquito genome and use that to find novel variants.
+
+**Benchmarking of structural variant detection in the tetraploid potato genome using linked-read sequencing**.
+Marius Weisweiler and Benjamin Stich 2022. [Link](https://doi.org/10.1016/j.ygeno.2023.110568)
+> A very thorough SV detection benchmark in a polyploid plant species.
+</Card>
+
+### Phasing
+<Card>
+**BLink-seq delivers population-scale haplotypes without long reads: a scalable framework for non-model genomics**.
+Azwad R. Iqbal _et al._ 2026. [Link](https://doi.org/10.64898/2026.08.03.742036)
+> Among other things, phasing performance improved 6000X (N50 = ~13Mbp vs ~2.3kbp) in the same data when linked-read information was incorporated.
+
+**Linked-read sequencing enables haplotype-resolved resequencing at population scale**. Dave Lutgen _et al._ 2020. [Link](https://doi.org/10.1111/1755-0998.13192)
+> In birds, found that phasing contiguities and accuracies adequate for most population genomic analyses can be
+> reached with moderate sequencing effort. At 15× coverage, phased haplotypes span ~90% of the genome assembly,
+> with N50 = ~1.25–4.6Mbp and N90 = ~0.27–0.72 Mbp. 
+</Card>
