@@ -3,7 +3,7 @@ title: Bead-Barcoded Linked-read Sequencing
 description: Linking sequences and beyond
 template: splash
 hero:
-  tagline: Welcome to the official BLink-seq site. Have a look around!
+  tagline: The official BLink-seq site and platform-agnostic linked-read knowledge repository
   image:
     file: ../../assets/logo.webp
   actions:
@@ -20,10 +20,16 @@ hero:
       variant: secondary
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
-import { LinkCard } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkCard, LinkButton } from '@astrojs/starlight/components';
+import CenteredHero from '@/components/CenteredHero.astro';
+import GradientLinkCard from '@/components/GradientLinkCard.astro';
 
-## Getting Started
+
+<GradientLinkCard
+  title="Work with us!"
+	href="mailto:jgrenier@cornell.edu?subject=BLink-seq Training"
+  description="We provide hands-on training to create BLink beads and BLink-seq libraries for sequencing. After training, you return to your lab with a batch of BLink beads ready for experimental use. Click here to contact us about training."
+/>
 
 <CardGrid>
 	<LinkCard

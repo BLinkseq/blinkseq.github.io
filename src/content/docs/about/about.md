@@ -14,7 +14,8 @@ a bead will get the same barcode attached to it.
 
 ![BLink-seq](../../../assets/BLinkseq.png)
 
-:::note[BLink is pronounced _blink_, like to blink an eye]
+:::note[Pronounciation]
+BLink is pronounced _blink_, like to blink an eye
 :::
 
 ## Why this matters

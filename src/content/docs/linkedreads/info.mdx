@@ -35,7 +35,7 @@ make sense of compatibilties/incompatibilities for software, or how you can conv
 | Type                                                          | Location | Format   | Invalid Encoding | Example                            |
 | :------------------------------------------------------------ | :---------------------------- | :------- | :------------------------------------ | :--------------------------------- |
 | [10X](#10x-genomics)                   | R1 read                       | `ATCG`   | `N`                                   | `AGGTTGGGTAAGATA...`               |
-| BLink-seq                  | `BX:Z` and `VX:i` tags        |  `ACBD`      | `VX:i:0`                              | `BX:Z:31_442_512 VX:i:1`           |
+| [BLink-seq](#blink-seq)                  | `BX:Z` and `VX:i` tags        |  `ACBD`      | `VX:i:0`                              | `BX:Z:31_442_512 VX:i:1`           |
 | [Haplotagging](#haplotagging) | `BX:Z` tag                    | `ACBD`   | `00` segment                          | `BX:Z:A04C54B96D11`                |
 | [stLFR](#stlfr)               | end of sequence ID            | `#1_2_3` | `0` segment                           | `@A003432423434:1:324#12_432_1`    |
 | [TELLseq](#tellseq)           | end of sequence ID            | `:ATCG`  | `N`                                   | `@A003432423434:1:324:TTACCACGAGG` |
@@ -56,16 +56,35 @@ the barcode **must** stay in the read. Moving the first 16bp into the read heade
 - limited to ~4.7 million barcodes
 ---
 
+### BLink-seq
+<strong>[Bead-barcoded Linked-read Sequencing](https://doi.org/10.64898/2026.08.03.742036)</strong>
+
+BLink-seq began as haplotagging, but when the team couldn't get haplotagging to work, they decided to
+keep changing the design until it worked, resulting in an independent development cycle with a different chemistry.
+Because of these haplotagging origins, it shares the ACBD combinatorial barcode encoding format.
+As we frequently say on this website, BLink-seq is an open-source approach to linked-read chemistry, with
+the protocol freely provided and reagents readily available from various suppliers.
+- ~7 million barcodes per sample
+- the barcode is encoded in a `BX:Z` SAM tag in the sequence header comment
+- combinatorial barcodes inline at start of R1 read
+- it uses a `VX:i` tag to indicate if a barcode is valid or not
+  - `VX:i:0` is **invalid**
+  - `VX:i:1` is **valid**
+
+---
 ### Haplotagging
-Unlike the other listed chemistries, [haplotagging](https://doi.org/10.1073/pnas.2015005118) is a non-commercial (DIY) linked-read chemistry. Haplotagging barcodes are combinatorial and
-are made up of four 6bp segments. Two of these segments ("A" and "C") are the first 12bp of the `I1` read and
+<strong>[Haplotype tagging](https://doi.org/10.1073/pnas.2015005118)</strong>
+
+Haplotagging is currently a non-commercial linked-read chemistry, although
+the inventors are [in the process](https://www.biotechbooster.nl/projects/haplotagging/) of trying to commercialize it.
+Haplotagging barcodes are combinatorial and are made up of four 6bp segments. Two of these segments ("A" and "C") are the first 12bp of the `I1` read and
 the other two ("B" and "D") are the first 12bp of the `I2` read, both of which are provided by Illumina for standard sequencing runs.
-Because of this segment design, there are `96^4` (~84 million) possible barcode combinations (~900,000 per sample). 
 The barcodes are stored in the sequence header under the `BX:Z` SAM tag, recoded in their "`ACBD`" format.
 
 ![Haplotagging](../../../assets/lastq/lr_haplotagging.png)
 
 #### Specification
+- ~84 million possible barcode combinations (~900,000 per sample)
 - 4 barcode segments
   - `A` segment is the first 6bp of the `I1` read
   - `C` segment is the next 6bp of the `I1` read (7-12)
@@ -93,7 +112,8 @@ the barcode recoded in the `1_2_3` format, where each segment is an integer.
 - barcode appended to sequence header with `#` sign
   - e.g. `@A003432423434:1:324#12_432_1`
 - invalid barcode segment encoded as `0` (e.g., `1_0_29`)
-- advertised to have a capacity over 3.6 **billion**, with up to 50 **million** per sample (actual results may vary)
+- advertised to have a capacity over 3.6 **billion**, with up to 50 **million** per sample
+  - actual results may vary
 
 ---
 #### TELL-seq
@@ -111,4 +131,5 @@ barcode gets appended in the read header using a colon (`:`).
 - barcode is appended to sequence header
   - e.g. `@A00234534562:1:544:AATTATACCACAGCGGTA`
 - invalid barcode contains at least one `N` character
-- advertised to have a capacity over 2 **billion** barcodes, but realistically use \<24 **million**
+- advertised to have a capacity over 2 **billion** barcodes
+  - realistically use \<24 **million**
