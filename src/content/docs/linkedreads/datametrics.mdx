@@ -5,7 +5,7 @@ sidebar:
 ---
 
 import { Badge } from '@astrojs/starlight/components';
-import { Card } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
 All sequencing data needs to be evaluated for various performance metrics. These include things like:
 - coverage depth
@@ -15,17 +15,19 @@ All sequencing data needs to be evaluated for various performance metrics. These
 
 Since linked-reads have an extra dimension (their molecular barcodes), there are some additional metrics specific
 to linked read data that are necessary for:
-<Card title="1. Understanding your data">
+<CardGrid>
+<Card title="Understanding your data">
   It's critical to understand the quality of your data coming off of a sequencer because it will help set
   expectations for downstream applications. Your scaffolding wasn't very effective? Maybe it's because there was
   very little linking.
 </Card>
 
-<Card title="2. Reporting in publications">
+<Card title="Reporting data">
     This will help reviewers and readers understand your data too and contextualize your findings. It will also
     provide meaningful information for what they might expect if they make linked-read libraries. The metrics described
     below need to become standard reported metrics.
 </Card>
+</CardGrid>
 
 The descriptions below use linked-read specific language. If you aren't familiar with concents like fragments or molecules,
 please refer to [the guide on linked-read terminology](../terminology)

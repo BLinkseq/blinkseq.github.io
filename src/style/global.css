@@ -6,21 +6,27 @@
   box-shadow: 0 1px 6px rgb(0 0 0 / 0.2); /* light drop shadow */
 }
 
-:root[data-theme='dark'] .card {
-  border: none;
-  box-shadow: 0 1px 8px rgb(0 0 0 / 0.4);
+
+.sidebar-pane a[aria-current="page"] {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    color: #fff;
 }
 
-/* TOC sidebar width */
-:root {
-  --sl-toc-width: 16rem;
-}
 
 
 .starlight-aside {
   border-radius: 0.8rem;
 }
 
+/* TOC sidebar width */
+:root {
+  --sl-toc-width: 16rem;
+  --sl-color-text-accent: #8b5cf6;
+}
+:root[data-theme='dark'] .card {
+  border: none;
+  box-shadow: 0 1px 8px rgb(0 0 0 / 0.4);
+}
 :root[data-theme='dark'] .starlight-aside {
   box-shadow: 0 2px 6px rgb(0 0 0 / 0.4);
 }
