@@ -29,3 +29,23 @@ NCBI accepts unaligned BAM files as a valid data format for submission. This sol
 
 We strongly urge uploading linked-read sequences to NCBI as interleaved unaligned BAM files so as to not waste precious
 linked-read data.
+
+## Ongoing debate
+The discussion about the best way to upload linked-read data is ongoing. There are pros/cons to every option, and we've discussed some above.
+By uploaded demultiplexed processed sequence data, you may lose reads that failed initial QC (e.g., BLink-seq reads without an ME sequence that were
+removed during barcode identification).
+
+### Pros
+- already demultiplexed
+- guaranteed to be usable
+- not subject to changing barcode lists
+- not subject to changing demultiplexing algorithms and software versions
+
+### Cons
+- lose some inititial sequences (that probably will be filtered anyway)
+- already-demultiplexed samples precludes availability of raw sequences to write new demultiplexing methods 
+  - realistically, people aren't chomping at the bit to do that
+
+Regardless of your approach, if you are uploading sequence data:
+1. if already demultiplexed, **must be in unaligned BAM format** to preserve barcode information
+2. if not already demultiplexed, **must provide all resources to demultiplex data** such that it can be successfully demultiplexed years to decades after submission
