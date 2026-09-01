@@ -42,6 +42,12 @@ make sense of compatibilties/incompatibilities for software, or how you can conv
 
 ---
 
+:::note[These are overviews]
+The descriptions of the linked-read technologies below can be considered high-level summaries of the chemistries.
+The figures omit things like spacer sequences, variable staggers, etc., which means you should **not** base
+data processing algorithms exclusively on these overviews.
+:::
+
 ### 10X Genomics
 The elder of the bunch and also a discontinued commercial product. 10X-style FASTQ files have the linked-read barcode
 as the first 16bp of the forward (`R1`) read. For these data to be compatible with the 10X LongRanger suite,
@@ -64,6 +70,9 @@ keep changing the design until it worked, resulting in an independent developmen
 Because of these haplotagging origins, it shares the ACBD combinatorial barcode encoding format.
 As we frequently say on this website, BLink-seq is an open-source approach to linked-read chemistry, with
 the protocol freely provided and reagents readily available from various suppliers.
+
+![BLink-seqw](../../../assets/lastq/lr_blinkseq.png)
+
 - ~7 million barcodes per sample
 - the barcode is encoded in a `BX:Z` SAM tag in the sequence header comment
 - combinatorial barcodes inline at start of R1 read
