@@ -27,10 +27,10 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.2094621"
-     inkscape:cx="377.85392"
-     inkscape:cy="230.26765"
-     inkscape:window-width="1884"
-     inkscape:window-height="1022"
+     inkscape:cx="377.44052"
+     inkscape:cy="229.85425"
+     inkscape:window-width="1499"
+     inkscape:window-height="805"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -77,10 +77,10 @@
        style="font-weight:500;font-stretch:expanded;font-size:66.404px;line-height:1.25;font-family:Inconsolata;-inkscape-font-specification:'Inconsolata, Medium Expanded';text-align:center;letter-spacing:-1.99px;text-orientation:upright;white-space:pre;shape-inside:url(#rect5);display:inline;fill:#97889f;fill-opacity:1;stroke:#4b275c;stroke-width:26.2677;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;stroke-dasharray:none;paint-order:fill markers stroke"><tspan
          x="213.31836"
          y="723.70104"
-         id="tspan4"><tspan
+         id="tspan11"><tspan
            dx="0 39.842426 39.842426 39.842434 39.842419 39.842434 39.842434 39.842419 39.842419 39.842449 39.842419 39.842419"
            style="stroke:none"
-           id="tspan1">Forward read</tspan></tspan></text><g
+           id="tspan10">Forward read</tspan></tspan></text><g
        id="g9"
        transform="matrix(0.58136209,0,0,0.58136209,38.965407,73.729404)" /><text
        xml:space="preserve"
@@ -364,7 +364,7 @@
          id="tspan22"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.05461px;font-family:'FiraCode Nerd Font Mono';-inkscape-font-specification:'FiraCode Nerd Font Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#8d8d8d;fill-opacity:1;stroke:none;stroke-width:0.0178014"
          x="115.63788"
-         y="175.46567">@seq_id/1 BX:Z:</tspan></text><rect
+         y="175.46567">@seq_id/2 BX:Z:</tspan></text><rect
        style="fill:#8d8d8d;fill-opacity:1;stroke:#c6c6c6;stroke-width:0.0319813;stroke-linejoin:round;paint-order:fill markers stroke"
        id="rect22"
        width="5.4720478"
