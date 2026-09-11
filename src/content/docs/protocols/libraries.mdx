@@ -221,3 +221,109 @@ This is to remove any untagmented oligos on the beads
     24. Incubate samples in a thermoscycler: **10min** at **37°C**, then **5min** at **65°C** (heat kill)
         - If possible, set the lid temperature to 65°C.
 </Steps>
+
+### 4. PCR Setup
+The last part of the protocol is to attach Universal Dual Index (UDI) adapters/indices to
+the DNA via PCR. After this, all that's left is a final bead cleanup.
+
+<Steps>
+    25. Thaw hybrid UDI stocks (mix of TruSeq-i5 + Nextera-i7, 5nM each) on ice. Pulse-spin when thawed.
+    26. Prepare PCR master mix on ice with excess, e.g. 1.1 * _N_ samples, or more if required for liquid handling dead volume.
+        <Card title="PCR Master Mix">
+        | Vol/sample | Reagent |
+        |---:|:---|
+        | 12.5 μL  | 2x HiFi MM (NEB [#M0541](https://www.neb.com/en-us/products/m0541-nebnext-high-fidelity-2x-pcr-master-mix)) |
+        | 7.5 μL | NF water |
+        | 20 μL | Total |
+        </Card>
+    27. Program a thermocycler as indicated below, including an initial pause step at **72°C**. Start the thermocycler so that the block pre-heats to **72°C**.
+        - When the ExoI incubation is complete, pulse-spin each strip and place on a magnetic rack.
+        - The samples are stable on the magnetic rack at room temperature.
+        <Aside type="caution">
+        Do not proceed until:
+            - the supernatant is clear
+            - the PCR master mix is prepared
+            - the UDI primers are thawed
+            - the PCR program is ready
+        </Aside>
+    28. Set a (multichannel) pipet to **100ul**. One strip at a time on magnet, add **100μl WASH+T** (no need to remove the
+        ExoI reaction first – just add WASH+T to the tube). If the beads come off the magnet, pause until the supernatant
+        is clear. With the same tips, remove the entire supernatant (~120 ul).
+        <Aside>
+        If processing many strips, close them to prevent the beads from drying out while washing all of the strip
+        </Aside>
+        <Card title="Optional: Bead Downsampling">
+        To downsample beads, remove the strip from the magnet after adding WASH+T buffer, and mix to fully disperse
+        the beads. Transfer the desired volume to a new strip and place on a magnetic rack. When the supernatant is clear,
+        remove the supernatant. The remaining tagmented beads can be stored at 4° C and processed later if desired.
+        </Card>
+    29. Move the strips containing the bead pellets to a chiller block or a rack on ice.
+        <Aside>
+        The PCR mix is not a hot-start formulation, because the tagmented ends need to be extended before the first
+        denaturation step. Keep all PCR reagents and the samples on ice while setting up the PCR reaction, and transfer
+        directly to a pre-heated PCR block to minimize polymerase activity below 72°C.
+        </Aside>
+    30. On a chiller block or on ice, add **20 μl 2x HiFi Master Mix** per sample.
+    31. On a chiller block or on ice, add **5 μl hybrid UDI stock** (TruSeq-i5 + Nextera-i7, 5nM each) to each sample.
+        <Aside>
+        **Important**: Record which UDI wells are used for each sample.
+        </Aside>
+</Steps>
+
+    <Card title="Thermocycler Program">
+    - Initial pause: 72°C preheat and hold at temperature
+    - Initial incubation: 72°C for 5min extend tagmentation gaps
+    - Initial denaturation: 98°C for 30sec
+    - 12* Cycles of:
+        - 98°C for 10sec
+        - 65°C for 30sec
+        - 72°C for 1min
+    - Final extension: 72°C for 5min
+    
+    *PCR cycle number may need to be adjusted based on beads and DNA input.
+    </Card>
+<Steps>
+        32. <Badge text="Recommended" variant="success"/> put away all pre-PCR reagents before moving to a different bench for post-PCR cleanup.
+</Steps>
+
+### 5. Post-PCR cleanup and quality checks
+  <Steps>
+    33. Prepare fresh 80% ethanol (500μl per sample)
+    34. Place PCR reactions on post-PCR magnetic rack
+    35. Set up new strips with **22.5 μl** DNA cleanup beads (**0.9x**)
+    36. Transfer PCR reaction to new strips containing DNA cleanup beads
+    37. Vortex to mix well, incubate at least 5min at room temperature
+    38. Pulse-spin and transfer strip to magnet
+    39. On magnet, wash **2x** with **200 μl fresh 80% ethanol**
+        - For each wash, pipette up and down (on magnet) to rinse the beads, then leave the ethanol wash on the beads for minimum 30sec
+    40. After 2nd wash: pulse spin and remove residual wash
+    41. Allow beads to dry briefly, only until droplets are gone (beads should still be dark and glossy)
+    42. Remove from magnetic rack and resuspend beads in **23μl 0.1x TE**
+    43. Incubate **at least 5 min** at **room temperature**, transfer to magnetic rack until clear
+    44. Transfer supernatant to a clean, labelled strip tube or plate. This is the final BLink-seq library
+  </Steps>
+
+<Card title="Optional: quantify and check the size distribution for all or a subset of samples">
+- Prepare tubes for Qubit assay: add 198 μl 1x HS dsDNA Qubit reagent, hold in the dark at room temperature until
+equilibrated.
+- Transfer 2μl final library stock to Qubit tubes. Vortex, pulse-spin, and incubate 2 min at room temperature.
+- Read and record Qubit measurements.
+- Prepare aliquots for size QC, dilute if needed to be in the target concentration range.
+Final library size can be estimated by gel electrophoresis or using an instrument such as the Fragment Analyzer (Agilent)
+or equivalent. A successful library will typically have a size range from ~300-1500bp, with 40% or more in the target size
+range of 450-1200bp. To adjust the size range in the next experiment, alter the amount of ME-B transposome used (more
+ME-B transposome = smaller insert sizes and vice versa). Libraries with less material in the target size range can still be
+sequenced, but the amount of linked reads may be lower and/or the insert size may be smaller than ideal (\<450bp).
+</Card>
+
+## Pooling and sequencing
+- Pool final libraries, based on QC metrics (Qubit concentration and size distribution) when available. If the final pool
+will be size-selected, plan the pool based on molarity estimates for the target size range.
+- Recommended: size-select the final pool (**450-1200bp**) on a Pippin instrument (Sage Science) in order to optimize
+insert sizes prior to sequencing.
+- Sequence on an Illumina sequencer, recommended 2x150 PE reads with dual index reads. Index read lengths should
+match the UDI primers used.
+
+## Analysis
+To process your BLink-seq data, use [Harpy](https://pdimens.github.io/harpy/).
+Harpy includes several modules for preprocessing reads, aligning reads, calling variants (SNPs and SVs), and more.
