@@ -17,6 +17,7 @@ export default defineConfig({
         navbarLinks: [
           { label: "Genomics Innovation", href: "https://www.biotech.cornell.edu/about-us/people/400"},
           { label: "Harpy", href: "https://pdimens.github.io/harpy" },
+          { label: "Contact", href: "https://blinkseq.github.io/about/contact" }
         ],
       }),
         starlightScrollToTop({
