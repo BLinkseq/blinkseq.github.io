@@ -8,7 +8,7 @@
 
 
 .sidebar-pane a[aria-current="page"] {
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    background: linear-gradient(40deg, #3b82f6, #8b5cf6);
     color: #fff;
 }
 
