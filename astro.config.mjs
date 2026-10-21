@@ -10,7 +10,10 @@ export default defineConfig({
     starlight({
       customCss: ['./src/style/global.css'],
       title: '',
-      logo: { src: '/src/assets/logo.svg'},
+      logo: { 
+		  src: '/src/assets/logo.svg',
+	      replacesTitle: true,
+	  },
       favicon: '/favicon.png',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/BLinkseq' }],
       plugins: [starlightUiTweaks({
