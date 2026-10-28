@@ -19,7 +19,7 @@ export default defineConfig({
       plugins: [starlightUiTweaks({
         navbarLinks: [
           { label: "Genomics Innovation", href: "https://www.biotech.cornell.edu/about-us/people/400"},
-          { label: "Harpy", href: "https://pdimens.github.io/harpy" },
+          { label: "Harpy", href: "https://blinkseq.github.io/harpy" },
           { label: "Contact", href: "https://blinkseq.github.io/about/contact" }
         ],
       }),

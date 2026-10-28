@@ -15,7 +15,7 @@ and hands-on collaboration. Our goal is to make it possible for any laboratory t
 prepare high-quality linked-read libraries.
 
 We also want to help linked-read sequencing reach its full potential as a research tool. That's why we advocate for
-a [standardized linked-read data format](https://blinkseq.github.io/lastq), develop [chemistry-agnostic software](https://pdimens.github.io/harpy)
+a [standardized linked-read data format](https://blinkseq.github.io/lastq), develop [chemistry-agnostic software](https://blinkseq.github.io/harpy)
 that works across linked-read technologies, and provide educational resources for understanding, analyzing, and
 reporting linked-read-specific metrics.
 
